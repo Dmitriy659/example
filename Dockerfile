@@ -1,7 +1,5 @@
-FROM node:14-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 3000
-CMD ["npm", "start"]
+# Используем образ Alpine Linux в качестве базового образа, который является легковесным
+FROM alpine:latest
+
+# Команда, которая будет выполнена при запуске контейнера на основе этого образа
+CMD echo "Hello, Docker!"
